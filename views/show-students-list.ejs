@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('./includes/show-list-buttons.ejs') %> 
+    <% if (users.length<=0) { %>
+        <h1 class="users-heading">No users to Show</h1>
+    <% } else{ %>
+        <h2><%= message %> </h2>
+       <div class="users-container">
+        <% users.forEach(user => { %>
+            <div class="user-box">
+                <p class="user-name"><span class="user-info">Name:</span> <%= user.name %> </p>
+                <p class="user-email"><span class="user-info">Email:</span>  <%= user.email  %> </p>
+                <p class="user-category"><span class="user-info">Category:</span> <%= user.category  %> </p>
+            </div>
+            <% }) %>
+       </div>
+        <% } %> 
+</body>
+</html>

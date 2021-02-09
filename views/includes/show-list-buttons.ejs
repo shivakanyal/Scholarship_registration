@@ -1,0 +1,35 @@
+<style>
+.buttons-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+
+}
+.rejected-button,.selected-button,.add-user{
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 10px
+}
+.rejected-button{
+    background-color:#e74c3c;
+    color: #fff;
+    margin-right: 20px;
+}
+.selected-button{
+    background-color: #2ecc71;
+    color: #fff;
+    margin-right: 20px;
+}
+.add-user{
+    background-color: rgb(3, 138, 138);
+    color: #fff;
+}
+</style>
+
+<div class="buttons-box">
+    <a href="/rejected-students" class="rejected-button"> List of rejected Students</a>
+    <a href="/selected-students" class="selected-button"> List of Selected Students</a>
+    <a href="/" class="add-user"> Registation Page</a>
+</div>
